@@ -1,0 +1,50 @@
+site_name: Jianan Sun's Blog
+site_url: https://example.com
+copyright: Copyright &copy; 2025 JNS
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky  # 固定导航栏
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+  font:
+    text: Merriweather Sans
+    code: Red Hat Mono
+  palette:
+    # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: deep orange
+      accent: blue
+
+    # Light Mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: deep orange
+      accent: orange
+
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+        custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - admonition
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true  # 显示标题锚点链接
